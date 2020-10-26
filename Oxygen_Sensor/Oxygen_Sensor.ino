@@ -18,12 +18,12 @@ void loop() {
   delayMicroseconds(2);
   // Sets the trigPin HIGH (ACTIVE) for 10 microseconds
   digitalWrite(trigPin, HIGH);
-  delayMicroseconds(2);
-  digitalWrite(trigPin, LOW);
+  delayMicroseconds(20);
   // Reads the echoPin, returns the sound wave travel time in microseconds
   duration = pulseIn(echoPin, HIGH);
+  digitalWrite(trigPin, LOW);
     // Calculating the speed
-   Speed = 62000 / duration;
+   Speed = 70000 / duration;
   // Displays the speed on the Serial Monitor
   Serial.print("Duration: ");
   Serial.print(duration);
