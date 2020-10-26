@@ -2,7 +2,7 @@
 #define trigPin 3 //attach pin D3 Arduino to pin Trig of HC-SR04
 
 // defines variables
-long duration; // variable for the duration of sound wave travel
+unsigned long duration; // variable for the duration of sound wave travel
 int distance; // variable for the distance measurement
 int Speed;
 
@@ -18,21 +18,17 @@ void loop() {
   delayMicroseconds(2);
   // Sets the trigPin HIGH (ACTIVE) for 10 microseconds
   digitalWrite(trigPin, HIGH);
-  delayMicroseconds(10);
+  delayMicroseconds(2);
   digitalWrite(trigPin, LOW);
   // Reads the echoPin, returns the sound wave travel time in microseconds
   duration = pulseIn(echoPin, HIGH);
-  
-//   Calculating the distance
-  distance = duration * 0.034 / 2; // Speed of sound wave divided by 2 (go and back)
-  // Displays the distance on the Serial Monitor
-  Serial.print("Distance: ");
-  Serial.print(distance);
-  Serial.print(" cm, ");
     // Calculating the speed
-   Speed = 0.09 / duration;
+   Speed = 62000 / duration;
   // Displays the speed on the Serial Monitor
-  Serial.print("Speed: ");
+  Serial.print("Duration: ");
+  Serial.print(duration);
+  Serial.print(", Speed: ");
   Serial.print(Speed);
   Serial.println(" m/s");
+  delay(500);
 }
