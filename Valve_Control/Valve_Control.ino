@@ -4,15 +4,6 @@ int rightFeed=2;
 int rightWaste=4;
 int leftWaste=5;
 int equalizer=3;
-//int ledPin = 11;
-//int bluPin = 12;
-//int lfLed = 6;
-//int rfLed = 2;
-//int rwLed = 4;
-//int lwLed = 5;
-//int eqLed = 3;
-
-
 
 int sensorPin = A0;    // Select input pin for the potentiometer
 int sensorValue = 0;   // Variable stores value coming from the sensor
@@ -26,13 +17,13 @@ void setup() {
   pinMode(rightWaste,OUTPUT);
   pinMode(leftWaste,OUTPUT);
   pinMode(equalizer,OUTPUT);
-  //pinMode (ledPin, OUTPUT);
-  //pinMode (bluPin, OUTPUT);
-  //pinMode (lfLed, OUTPUT);
-  //pinMode (rfLed, OUTPUT);
-  //pinMode (rwLed, OUTPUT);
-  //pinMode (lwLed, OUTPUT);
-  //pinMode (eqLed, OUTPUT);
+  
+  digitalWrite(leftFeed,HIGH);
+  digitalWrite(leftWaste,HIGH);
+  digitalWrite(rightFeed,HIGH);
+  digitalWrite(rightWaste,HIGH);
+  digitalWrite(equalizer,LOW);
+  delay(2000);
 }
 
 void loop() {
@@ -66,84 +57,48 @@ void loop() {
      delay(500);
     digitalWrite(ledPin, LOW);
      delay(1000);
-  } 
-digitalWrite(leftFeed,LOW);
-digitalWrite(rightWaste,LOW);
-Serial.println("LF AND RW VALVE OFF");
-digitalWrite(lfLed, LOW);
-digitalWrite(rwLed, LOW);
-delay(10000);*/
+  } */
 
-digitalWrite(equalizer,LOW);
-digitalWrite(leftFeed,LOW);
-digitalWrite(rightWaste,HIGH);
-Serial.println("RIGHT WASTE VALVE ON");
-//digitalWrite(eqLed, LOW);
-//digitalWrite(lfLed, LOW);
-//digitalWrite(rfLed, HIGH);
-delay(2000);
-
-Serial.println("");
-Serial.println("*************************");
-
-digitalWrite(equalizer,LOW);
-digitalWrite(rightFeed,LOW);
-digitalWrite(leftFeed,HIGH);
-digitalWrite(rightWaste,HIGH);
-Serial.println("RW AND  LF VALVE ON");
-//digitalWrite(eqLed, LOW);
-//digitalWrite(rfLed, LOW);
-//digitalWrite(lfLed, HIGH);
-//digitalWrite(rwLed, HIGH);
-delay(2000);
-
-Serial.println("");
-Serial.println("*************************");
-
-digitalWrite(leftWaste,LOW);
-digitalWrite(rightFeed,LOW);
-digitalWrite(leftFeed,HIGH);
-digitalWrite(rightWaste,HIGH);
-digitalWrite(equalizer,HIGH);
-Serial.println("LF RW EQ VALVE ON");
-//digitalWrite(lwLed, LOW);
-//digitalWrite(rfLed, LOW);
-//digitalWrite(eqLed, HIGH);
-//digitalWrite(rwLed, HIGH);
-//digitalWrite(lfLed, HIGH);
-delay(10000);
-
-Serial.println("");
-Serial.println("*************************");
-
-digitalWrite(equalizer,LOW);
-digitalWrite(rightFeed,LOW);
-
-digitalWrite(leftFeed,HIGH);
-digitalWrite(rightWaste,HIGH);
-digitalWrite(leftWaste,HIGH);
-Serial.println("LW RW LF VALVE ON");
-//digitalWrite(eqLed, LOW);
-//digitalWrite(rfLed, LOW);
-//digitalWrite(lwLed, HIGH);
-//digitalWrite(lfLed, HIGH);
-//digitalWrite(rwLed, HIGH);
-delay(2000);
-
-Serial.println("");
-Serial.println("*************************");
-
-digitalWrite(equalizer,LOW);
-digitalWrite(leftFeed,LOW);
-digitalWrite(rightWaste,HIGH);
-digitalWrite(equalizer,HIGH);
-digitalWrite(rightFeed,HIGH);
-Serial.println("RW EQ RF VALVE ON");
-//digitalWrite(eqLed, LOW);
-//digitalWrite(lfLed, LOW);
-//digitalWrite(rwLed, HIGH);
-//digitalWrite(eqLed, HIGH);
-//digitalWrite(rfLed, HIGH);
-delay(2000);
+  digitalWrite(leftFeed,HIGH);
+  digitalWrite(leftWaste,LOW);
+  digitalWrite(rightFeed,LOW);
+  digitalWrite(rightWaste,HIGH);
+  digitalWrite(equalizer,LOW);
+  delay(8000);
+  
+  digitalWrite(leftFeed,HIGH);
+  digitalWrite(leftWaste,LOW);
+  digitalWrite(rightFeed,LOW);
+  digitalWrite(rightWaste,LOW);
+  digitalWrite(equalizer,HIGH);
+  delay(1000);
+  
+  digitalWrite(leftFeed,LOW);
+  digitalWrite(leftWaste,LOW);
+  digitalWrite(rightFeed,HIGH);
+  digitalWrite(rightWaste,LOW);
+  digitalWrite(equalizer,HIGH);
+  delay(1000);
+  
+  digitalWrite(leftFeed,LOW);
+  digitalWrite(leftWaste,HIGH);
+  digitalWrite(rightFeed,HIGH);
+  digitalWrite(rightWaste,LOW);
+  digitalWrite(equalizer,LOW);
+  delay(8000);
+  
+  digitalWrite(leftFeed,LOW);
+  digitalWrite(leftWaste,LOW);
+  digitalWrite(rightFeed,HIGH);
+  digitalWrite(rightWaste,LOW);
+  digitalWrite(equalizer,HIGH);
+  delay(1000);
+  
+  digitalWrite(leftFeed,HIGH);
+  digitalWrite(leftWaste,LOW);
+  digitalWrite(rightFeed,LOW);
+  digitalWrite(rightWaste,LOW);
+  digitalWrite(equalizer,HIGH);
+  delay(1000);
 
 }
