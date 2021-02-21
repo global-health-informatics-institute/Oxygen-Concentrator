@@ -1,3 +1,11 @@
+/*
+ * Authors: Mtheto Sinjani & Gerry Douglas
+ * Global Health Informatics Institute
+ * OpenO2
+ * www.ghii.org & www.openO2.org
+*/
+
+
 #include <Wire.h>
 // Include Adafruit Graphics & OLED libraries
 #include <Adafruit_GFX.h>
